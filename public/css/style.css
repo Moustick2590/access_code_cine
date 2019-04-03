@@ -1,0 +1,498 @@
+@font-face {
+  font-family: "daypbl";
+  src: url("../font/daypbl.ttf");
+}
+h1,
+h2 {
+  font-family: "daypbl";
+}
+
+.btn-secondary {
+  background: #6ea2b0;
+  border: none;
+}
+
+section {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.navbar-light .navbar-toggler-icon {
+  margin-top: 0;
+}
+
+.navbar-light .navbar-toggler {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+body header .bg-light #navbarToggler a, .dropdown {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/********************************************** NAVBAR **********************************************/
+body {
+  position: relative;
+  /********************************************** ACCUEIL BANNER **********************************************/
+  /********************************************** NOUVEAUX FILMS ACCUEIL**********************************************/
+  /********************************************** LIST FILM **********************************************/
+  /********************************************** FILMS **********************************************/
+  /********************************************** MEMBRES **********************************************/
+  /********************************************** FOOTER **********************************************/
+}
+body header {
+  background-color: #c64034 !important;
+}
+body header .bg-light {
+  background-color: #c64034 !important;
+}
+body header .bg-light .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "daypbl";
+}
+body header .bg-light .navbar-brand img {
+  width: 25%;
+  height: auto;
+}
+body header .bg-light #navbarToggler {
+  justify-content: flex-end;
+}
+body header .bg-light #navbarToggler .navbar-nav {
+  margin-right: 0px !important;
+}
+body header .bg-light #navbarToggler .navbar-nav li {
+  font-weight: bold;
+}
+body header .bg-light #navbarToggler #userName {
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #fff;
+  background-color: #6ea2b0;
+  border-color: #6c757d;
+  border-radius: 5px;
+  padding: 0.375rem 0.75rem;
+  margin-right: 20px;
+}
+body header .bg-light #navbarToggler a {
+  margin-right: 20px;
+}
+body header .bg-light #navbarToggler a .fas {
+  margin-right: 10px;
+}
+body header .bg-light #navbarToggler #dropdownMenuButton .fas {
+  margin-right: 10px;
+}
+body header .bg-light #navbarToggler .dropdown-menu.show {
+  background: #c64034;
+  border: none;
+}
+body header .bg-light #navbarToggler form label {
+  margin-left: 5px;
+}
+body header .bg-light #navbarToggler form input {
+  border-radius: 5px;
+  margin: 5px;
+}
+body header .bg-light #navbarToggler form button {
+  color: #6ea2b0;
+  border-color: #6ea2b0;
+}
+body header .bg-light #navbarToggler form button:hover {
+  background-color: #6ea2b0;
+  border-color: #6ea2b0;
+  color: white;
+}
+body .big_title {
+  margin-top: 80px;
+}
+body #camera-body,
+body #reel-1,
+body #reel-2 {
+  fill: #fff;
+  fill-opacity: 0.95;
+  stroke: none;
+}
+body #banner {
+  height: 100vh;
+  background: #111;
+  color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: radial-gradient(#333, #111);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+}
+body #banner #fly-in {
+  font-family: "daypbl";
+  font-size: 4em;
+  height: 20vh;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 59vw;
+  display: flex;
+  justify-content: center;
+}
+body #banner #fly-in span {
+  display: block;
+  font-size: 0.4em;
+  opacity: 0.8;
+}
+body #banner #fly-in div {
+  position: absolute;
+  opacity: 0;
+  animation: switch 32s linear infinite;
+}
+body #banner #fly-in div:nth-child(2) {
+  animation-delay: 4s;
+}
+body #banner #fly-in div:nth-child(3) {
+  animation-delay: 8s;
+}
+body #banner #fly-in div:nth-child(4) {
+  animation-delay: 12s;
+}
+body #banner #fly-in div:nth-child(6) {
+  animation-delay: 20s;
+}
+body #banner #fly-in div:nth-child(7) {
+  animation-delay: 24s;
+}
+body #banner #fly-in div:nth-child(5) {
+  animation-delay: 16s;
+}
+body #banner #fly-in div:nth-child(8) {
+  animation-delay: 28s;
+}
+@keyframes switch {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(4);
+  }
+  3% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(0.9);
+  }
+  13% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.1);
+  }
+}
+body span {
+  margin-top: 25px;
+  font-family: "daypbl";
+  font-size: 1.2em;
+  font-weight: lighter;
+  font-weight: 300;
+  line-height: 2em;
+}
+body .container {
+  position: relative;
+}
+body .container #liste #list_films ul {
+  padding: 0;
+  list-style: none;
+}
+body .container #liste #list_films ul .list {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 15px;
+}
+body .container #liste #list_films ul .list .fas {
+  margin-right: 20px;
+}
+body .container #liste #list_films ul .list a {
+  color: black;
+}
+body .container #liste #list_films ul .list a:hover {
+  text-decoration: none;
+  color: #c64034;
+}
+body .container #carrousel {
+  position: absolute;
+  top: 0;
+  left: 35vw;
+  bottom: 0;
+  right: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+body .container #carrousel .block {
+  position: absolute;
+  z-index: 100;
+}
+body .container #carrousel .n1 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(140, 35, 24, 0.5);
+  animation: horizantal 7.5s linear infinite;
+}
+body .container #carrousel .n2 {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(94, 140, 106, 0.5);
+  animation: vertical 7.5s linear infinite;
+  animation-delay: 1.5s;
+}
+body .container #carrousel .n3 {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(136, 166, 94, 0.5);
+  animation: horizantal 7.5s linear infinite;
+  animation-delay: 3s;
+}
+body .container #carrousel .n4 {
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(242, 196, 90, 0.5);
+  animation: vertical 7.5s linear infinite;
+  animation-delay: 4.5s;
+}
+@keyframes horizantal {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes vertical {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+body .container #carrousel .bg {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: -105;
+  background: #fff;
+  opacity: 0;
+  animation: appear 8s linear infinite;
+}
+body .container #carrousel .i2 {
+  animation-delay: 2s;
+  left: 0;
+}
+body .container #carrousel .i3 {
+  animation-delay: 4s;
+  left: -45%;
+  top: -10%;
+}
+body .container #carrousel .i4 {
+  animation-delay: 6s;
+}
+@keyframes appear {
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    background-position: right;
+    zoom: 105%;
+  }
+}
+body #description {
+  margin-bottom: 5vh;
+}
+body #description #desc_movie figure img {
+  height: 100%;
+}
+body #description #desc_movie figure {
+  box-shadow: inset 0 0 100px rgba(0, 0, 20, 0.7), 0 5px 15px rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(top, rgba(255, 145, 0, 0.2) 0%, rgba(255, 230, 48, 0.2) 60%), -webkit-linear-gradient(20deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 35%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body #description #desc_movie figure img {
+  -webkit-filter: sepia(0.2) brightness(1.1) contrast(1.3);
+  transition: -webkit-filter 0.3s ease-in-out;
+  position: relative;
+  z-index: -1;
+}
+body #description #desc_movie figure:hover {
+  background: none;
+}
+body #description #desc_movie figure:hover img {
+  -webkit-filter: sepia(0) brightness(1) contrast(1);
+}
+body #description #desc_movie .description {
+  margin: 5%;
+  list-style: none;
+}
+body #description #desc_movie #titre {
+  font-size: 2em;
+  font-weight: 800;
+}
+body #description .titre {
+  margin: 1%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+body #description .titre a {
+  color: black;
+}
+body #description .titre a:hover {
+  text-decoration: none;
+  color: #c64034;
+}
+body #description .titre a figure {
+  box-shadow: inset 0 0 100px rgba(0, 0, 20, 0.7), 0 5px 15px rgba(0, 0, 0, 0.5);
+  background: -webkit-linear-gradient(top, rgba(255, 145, 0, 0.2) 0%, rgba(255, 230, 48, 0.2) 60%), -webkit-linear-gradient(20deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 35%);
+  width: 500px;
+  height: 338px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body #description .titre a figure img {
+  -webkit-filter: sepia(0.2) brightness(1.1) contrast(1.3);
+  transition: -webkit-filter 0.3s ease-in-out;
+  position: relative;
+  z-index: -1;
+}
+body #description .titre a figure:hover {
+  background: none;
+}
+body #description .titre a figure:hover img {
+  -webkit-filter: sepia(0) brightness(1) contrast(1);
+}
+body #description .titre a .liste_img {
+  width: 100%;
+  height: auto;
+}
+body #inscription {
+  text-align: center;
+}
+body #inscription .chmp {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+}
+body #inscription span {
+  min-height: 50px;
+}
+body #inscription #errorMsgPseudoLogin {
+  color: red;
+}
+body #inscription #errorMsgPassOne {
+  color: red;
+}
+body #inscription #errorMsgPassTwo {
+  color: red;
+}
+body #inscription #errorMsgEmail {
+  color: red;
+}
+body #inscription #sub {
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+body #form_addFilm {
+  margin-bottom: 20px;
+}
+body #form_addFilm #desc {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  height: 100px;
+  vertical-align: top;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  margin-bottom: 20px;
+}
+body #form_addFilm #envoie {
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 15px;
+}
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: #6ea2b0;
+  color: white;
+  height: 3vh;
+}
+body footer p {
+  margin-bottom: 0;
+}
+
+/********************************************** RESPONSIVE **********************************************/
+@media screen and (max-width: 772px) {
+  body .container #carrousel {
+    display: none;
+  }
+
+  body header .bg-light #navbarToggler .dropdown-menu.show {
+    width: 100%;
+  }
+
+  body #description .titre a figure {
+    height: auto;
+    width: 100%;
+  }
+
+  body #description .titre a .liste_img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  body header .bg-light .navbar-brand {
+    font-size: 13px;
+  }
+
+  .navbar-light .navbar-toggler {
+    top: 13px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}
+
+{% if connexion is same as ("ok") %}
+<section>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-4 col-lg-4 offset-md-4 col-md-4 offset-sm-3 col-sm-3">
+                <div id="inscription">
+                    <h2>Ajouter un film</h2>
+
+                    <p>Bonjour {{pseudo}}, tu veux ajouter un film ?</p>
+
+                    <form method="post" enctype="multipart/form-data" action="membres" id="form_addFilm">
+
+                        <label for="titre">Titre du film :</label><br>
+                        <input type="text" class="chmp" name="titre"><br><br>
+
+                        <label for="genre">Genre :</label><br>
+                        <input type="text" class="chmp" name="genre"><br><br>
+
+                        <label for="realisateur">Realisateur :</label><br>
+                        <input type="text" class="chmp" name="realisateur"><br><br>
+
+                        <label for="realisateur2">Realisateur 2 (optionnel) :</label><br>
+                        <input type="text" class="chmp" name="realisateur2"><br><br>
+
+                        <label for="acteur">Acteur Principal 1 :</label><br>
+                        <input type="text" class="chmp" name="acteur"><br><br>
+
+                        <label for="acteur2">Acteur Principal 2 :</label><br>
+                        <input type="text" class="chmp" name="acteur2"><br><br>
+
+                        <label for="acteur3">Acteur Principal 3 :</label><br>
+                        <input type="text" class="chmp" name="acteur3"><br><br>
+
+                        <label for="annee">Année :</label><br>
+                        <input type="text" class="chmp" name="annee"><br><br>
+
+                        <label for="description">Déscription :</label><br>
+                        <input type="textarea" id="desc" name="description"><br>
+
+                        <label for="img">Image du film :</label><br>
+                        <input type="file" name="image" /><br>
+                        
+                        <input type="submit"  class="btn btn-secondary" id="envoie" value="Valider">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<div class="container-fluid" id="inscript">
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-4 col-lg-4 offset-md-4 col-md-4 offset-sm-3 col-sm-3">
+                <div id="inscription" >
+                    <h2>Inscription</h2><br><br>
+
+                    <form method="post" action="membres" id="form_registration">
+
+                        <label>Pseudo :</label><br>
+                        <input id="txt" class="chmp" name="pseudo"><br>
+                        <span id="errorMsgPseudoLogin"></span><br>
+
+                        <label>Mot de passe :</label><br>
+                        <input type="password" class="chmp" name="passOne"><br>
+                        <span id="errorMsgPassOne"></span><br>
+
+                        <label>Confirmaton :</label><br>
+                        <input type="password" class="chmp" name="passTwo"><br>
+                        <span id="errorMsgPassTwo"></span><br>
+
+                        <label>Email :</label><br>
+                        <input type="email" class="chmp" name="email"><br>
+                        <span id="errorMsgEmail"></span><br>
+
+                        <input type="submit" class="btn btn-secondary" id="sub" value="Valider">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+{%endif%}
+
+{% endblock %}
+
+
+{% block js %}
+<script src="public/js/users_inscription.js"></script>
+{% endblock %}

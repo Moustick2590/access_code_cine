@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}Acces Code Ciné{% endblock %}</title>
+
+    <meta name="description" content="Référencement de films, projet réaliser dans le cadre de l'access code school Besancon" />
+    <meta name="keywords" content="films" />
+
+    <meta property="og:title" content="Access Code Ciné" />
+    <meta property="og:type" content="référencement films" />
+    <meta property="og:image" content="http://aurelienc.promo-27.codeur.online/access_code_cine/public/img/favicon.png" />
+    <meta property="og:site_name" content="Aurélien, Lucas & Ghislain" />
+
+    <meta name="twitter:title" content="Acces Code Ciné" />
+    <meta name="twitter:description" content="Référencement films" />
+    <meta name="twitter:image" content="http://aurelienc.promo-27.codeur.online/access_code_cine/public/img/favicon.png" />
+
+   
+    
+<link rel="icon" href="./public/img/favicon.png" height="78" width="100" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">    
+   
+    {% block stylesheet %} 
+        <link href="http://aurelienc.promo-27.codeur.online/access_code_cine/public/css/style.css" rel="stylesheet" /> 
+    {% endblock %}
+</head>
+
+<body>
+    <header id="container-fluid">
+
+        <nav class="navbar navbar-expand-lg  fixed-top navbar-light bg-light">
+            
+            <a class="navbar-brand" href="http://aurelienc.promo-27.codeur.online/access_code_cine/accueil">{% block logo %}<img src="./public/img/favicon.png" height="78" width="100">{% endblock %}Access Code Ciné</a>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/access_code_cine/accueil">Accueil </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/access_code_cine/films">Films</a>
+                    </li>
+                </ul>
+
+
+                {% if connexion is same as ("ok") %}
+
+                <p id='userName'>{{pseudo}}</p>
+                <a class="btn btn-secondary" href="/access_code_cine/membres" role="button"><i class="fas fa-plus"></i>Ajouter un film</a>
+                <a class="btn btn-secondary" href="/access_code_cine/deconnexion" role="button"><i class="fas fa-undo-alt"></i>Deconnexion</a>
+
+                {% else %}
+
+                <a class="btn btn-secondary" href="/access_code_cine/membres"><i class="fas fa-sign-in-alt"></i>Inscription</a>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>Connexion</button>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <form method="post" action="/access_code_cine/{{pageActuelle}}" id="form_login">
+
+                            <label>Pseudo :</label><br>
+                            <input type="text" name="pseudo" placeholder="Pseudo"><br>
+
+                            <label>Mot de passe :</label><br>
+                            <input type="password" name="pass" placeholder="Mot de passe"><br>
+
+                            <input type="submit" class="btn btn-secondary" value="Valider"><br>
+
+                        </form>
+                    </div>
+                </div>
+
+
+                {% endif %}
+
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </nav>
+    </header>
+    
+    {% block banner %}
+    {% endblock banner %}
+    
+    {% block h1 %}
+       <div class ="container big_title">
+           <h1>Access Code Cine</h1>
+            <hr>
+       </div>
+        
+    {% endblock h1 %}
+    
+    {% block section %}
+    {% endblock section %}
+
+    <footer>
+        <p> Copyright 2019 | Credits : Aurélien, Lucas & Ghislain</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    {% block js %}
+    {% endblock %}
+
+</body>
+
+</html>

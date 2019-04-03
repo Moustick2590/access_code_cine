@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheet %}
+<link href="http://aurelienc.promo-27.codeur.online/access_code_cine/public/css/style.css" rel="stylesheet" /> {% endblock %}
+
+{% block logo %}<img src="http://aurelienc.promo-27.codeur.online/access_code_cine/public/img/favicon.png" height="78" width="100">{% endblock %}
+{% block section %}
+
+<section>
+<ul id="description" class="container">
+    {% for data in data %}
+
+    {% if data.acteurs is defined %}
+    <div class="row" id="desc_movie">
+        <figure class="col-md-6" >
+            <img class="img-fluid" src="http://aurelienc.promo-27.codeur.online/access_code_cine/public/img/{{data.image}}" alt="affiche film" width="1000" height="1361" />
+        </figure>
+
+        <div class="col-md-6">
+            <li class="description">
+                <h2>{{data.titre}}</h2>
+            </li>
+            <li class="description"><b>Genre :</b> {{data.genre}}</li>
+            <li class="description"><b>Description :</b> {{data.description}}</li>
+            <li class="description"><b>Réalisateur(s) :</b> {{data.realisateurs}}</li>
+            <li class="description"><b>Acteur(s) :</b> {{data.acteurs}}</li>
+            <li class="description"><b>Année de sortie :</b> {{data.annee}}</li>
+            <li class="description"><b>Ajouté par :</b> {{data.ajoutepar}}</li>
+        </div>
+    </div>
+
+    {% else %}
+
+    <li class="titre">
+        <a href="http://aurelienc.promo-27.codeur.online/access_code_cine/films/{{data.id}}">
+            <figure>
+                <img class="img-fluid liste_img col-md-6" src="http://aurelienc.promo-27.codeur.online/access_code_cine/public/img/{{data.image}}" alt="affiche film" width="1000" height="1361" />{{data.titre}}
+            </figure>
+        </a>
+    </li>
+    <hr>
+
+    {% endif %}
+
+    {% endfor %}
+</ul>
+</section>
+{% endblock %}
